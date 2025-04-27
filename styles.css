@@ -1,90 +1,87 @@
-/* Estilos gerais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Container para o layout */
+body {
+    font-family: Arial, sans-serif;
+}
+
 .container {
     display: flex;
     justify-content: space-between;
     padding: 20px;
 }
 
-/* Coluna direita */
-.coluna-direita {
-    width: 20%;
-    text-align: center;
-    padding-right: 20px;
-}
-
-/* Coluna da foto */
-.foto img {
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-}
-
-/* Instagram */
-.instagram img {
-    width: 30px;
-    height: 30px;
-    margin-top: 10px;
-}
-
-/* Coluna do meio (postagens) */
-.coluna-meio {
-    width: 55%;
-    padding: 0 20px;
-}
-
-/* Coluna esquerda (lista de postagens) */
 .coluna-esquerda {
-    width: 20%;
-    padding-left: 20px;
-    text-align: center;
+    width: 25%;
+    padding: 20px;
 }
 
-/* Estilo para as postagens */
-.postagem {
+.coluna-meio {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.coluna-direita {
+    width: 25%;
+    padding: 20px;
+}
+
+.foto img {
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    height: 150px;
     margin-bottom: 20px;
 }
 
-.imagem-postagem {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-}
-
-.imagem-postagem:hover {
-    transform: scale(1.1);
-}
-
-/* Estilo para as postagens na coluna esquerda */
-.lista-postagem img {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
-}
-
-/* Estilo do título */
-.titulo-postagem {
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none;
+h1, h2, h3 {
     color: #333;
 }
 
-.titulo-postagem:hover {
-    color: #007bff;
+.resumo-postagem, .titulo-postagem {
+    margin-bottom: 10px;
 }
 
-/* Estilo do resumo */
-.resumo-postagem {
-    font-size: 14px;
-    color: #555;
+.imagem-postagem {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.lista-postagem {
+    margin-bottom: 20px;
+}
+
+.instagram img {
+    width: 24px;
+    height: 24px;
+}
+
+.titulo-postagem, .resumo-postagem {
+    font-size: 16px;
+    color: #666;
+}
+
+.lista-postagem img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .coluna-esquerda, .coluna-meio, .coluna-direita {
+        width: 100%;
+    }
 }
