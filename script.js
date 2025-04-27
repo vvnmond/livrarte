@@ -15,7 +15,7 @@ const postagens = [
     // Adicione mais postagens conforme necessário
 ];
 
-// Função para carregar postagens na coluna central
+// Função para carregar postagens na coluna central (agora no meio)
 function carregarPostagens() {
     const containerPostagens = document.getElementById('postagens');
     
@@ -33,7 +33,7 @@ function carregarPostagens() {
     });
 }
 
-// Função para carregar a lista de postagens na coluna esquerda
+// Função para carregar a lista de postagens na coluna direita (anteriormente esquerda)
 function carregarListaPostagens() {
     const listaPostagens = document.getElementById('lista-postagens');
     
