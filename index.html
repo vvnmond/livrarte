@@ -18,15 +18,28 @@
             padding: 20px;
         }
 
-        /* Coluna esquerda (com as postagens) */
+        /* Coluna esquerda (com as informações pessoais) */
         .coluna-esquerda {
             flex: 1;
             padding: 20px;
             background-color: #fff;
         }
-        .coluna-esquerda img {
-            width: 100%;
-            height: auto;
+        .coluna-esquerda .foto img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .coluna-esquerda h1 {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+        .coluna-esquerda p {
+            font-size: 1em;
+            color: #555;
+        }
+        .coluna-esquerda .instagram img {
+            width: 30px;
+            height: 30px;
         }
 
         /* Coluna do meio (com as postagens) */
@@ -40,28 +53,15 @@
             height: auto;
         }
 
-        /* Coluna direita (com as informações pessoais) */
+        /* Coluna direita (com a lista de postagens) */
         .coluna-direita {
             flex: 1;
             padding: 20px;
             background-color: #fff;
         }
-        .coluna-direita .foto img {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-        }
-        .coluna-direita h1 {
-            font-size: 1.5em;
-            margin-top: 10px;
-        }
-        .coluna-direita p {
-            font-size: 1em;
-            color: #555;
-        }
-        .coluna-direita .instagram img {
-            width: 30px;
-            height: 30px;
+        .coluna-direita img {
+            width: 100%;
+            height: auto;
         }
 
         /* Invertendo a ordem das colunas */
@@ -69,29 +69,22 @@
             display: flex;
             flex-direction: row; /* Mantém a ordem das colunas: esquerda -> meio -> direita */
         }
-        .coluna-direita {
-            order: 2; /* Coloca a coluna direita na ordem correta */
-        }
         .coluna-esquerda {
-            order: 1; /* Coloca a coluna esquerda na ordem correta */
+            order: 1; /* Coloca a coluna esquerda (informações pessoais) na ordem correta */
+        }
+        .coluna-meio {
+            order: 2; /* Coloca a coluna do meio na ordem correta */
+        }
+        .coluna-direita {
+            order: 3; /* Coloca a coluna direita (lista de postagens) na ordem correta */
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Coluna esquerda: Lista de postagens -->
-        <div class="coluna-esquerda" id="lista-postagens">
-            <!-- As postagens aparecerão aqui -->
-        </div>
-
-        <!-- Coluna do meio: Postagens -->
-        <div class="coluna-meio" id="postagens">
-            <!-- Postagens serão carregadas via JavaScript -->
-        </div>
-
-        <!-- Coluna direita: Foto, nome, resumo e Instagram -->
-        <div class="coluna-direita">
+        <!-- Coluna esquerda: Foto, nome, resumo e Instagram -->
+        <div class="coluna-esquerda">
             <div class="foto">
                 <img src="sua-foto.jpg" alt="Sua foto" id="foto" class="imagem-expandivel">
             </div>
@@ -102,6 +95,16 @@
                     <img src="instagram-icon.png" alt="Instagram" id="instagram-icon">
                 </a>
             </div>
+        </div>
+
+        <!-- Coluna do meio: Postagens -->
+        <div class="coluna-meio" id="postagens">
+            <!-- Postagens serão carregadas via JavaScript -->
+        </div>
+
+        <!-- Coluna direita: Lista de postagens -->
+        <div class="coluna-direita" id="lista-postagens">
+            <!-- As postagens aparecerão aqui -->
         </div>
     </div>
 
