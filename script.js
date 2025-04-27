@@ -1,38 +1,69 @@
-// Exemplo de postagens (aqui você pode adicionar suas postagens)
+// Exemplo de postagens
 const postagens = [
     {
         titulo: "Primeiro Livro",
         imagem: "livro1.jpg",
         resumo: "Um breve resumo do primeiro livro...",
-        link: "pagina-livro1.html"
+        link: "#primeiro-livro"
     },
     {
         titulo: "Pintura Abstrata",
         imagem: "pintura1.jpg",
         resumo: "Texto explicando a pintura...",
-        link: "pagina-pintura1.html"
-    },
+        link: "#pintura-abstrata"
+    }
     // Adicione mais postagens conforme necessário
 ];
 
-// Função para carregar as postagens dinamicamente
+// Função para carregar postagens na coluna central
 function carregarPostagens() {
     const containerPostagens = document.getElementById('postagens');
     
     postagens.forEach(post => {
         const divPost = document.createElement('div');
-        divPost.classList.add('post');
+        divPost.classList.add('postagem');
 
         divPost.innerHTML = `
-            <h2>${post.titulo}</h2>
-            <img src="${post.imagem}" alt="${post.titulo}" class="imagem-postagem">
-            <p>${post.resumo}</p>
-            <a href="${post.link}">Leia mais...</a>
+            <h2 class="titulo-postagem">${post.titulo}</h2>
+            <img src="${post.imagem}" alt="${post.titulo}" class="imagem-postagem" onclick="abrirImagem('${post.imagem}')">
+            <p class="resumo-postagem">${post.resumo}</p>
         `;
 
         containerPostagens.appendChild(divPost);
     });
 }
 
-// Chama a função para carregar as postagens assim que o DOM estiver pronto
-document.addEventListener('DOMContentLoaded', carregarPostagens);
+// Função para carregar a lista de postagens na coluna esquerda
+function carregarListaPostagens() {
+    const listaPostagens = document.getElementById('lista-postagens');
+    
+    postagens.forEach(post => {
+        const divPost = document.createElement('div');
+        divPost.classList.add('lista-postagem');
+
+        divPost.innerHTML = `
+            <img src="${post.imagem}" alt="${post.titulo}" onclick="abrirPostagem('${post.link}')">
+            <h3 class="titulo-postagem">${post.titulo}</h3>
+            <p class="resumo-postagem">${post.resumo}...</p>
+        `;
+
+        listaPostagens.appendChild(divPost);
+    });
+}
+
+// Função para abrir uma imagem maior
+function abrirImagem(imagem) {
+    const imagemMaior = window.open(imagem, '_blank');
+    imagemMaior.focus();
+}
+
+// Função para rolar até a postagem na coluna central
+function abrirPostagem(link) {
+    document.querySelector(link).scrollIntoView({ behavior: 'smooth' });
+}
+
+// Carregar as postagens quando a página carregar
+document.addEventListener('DOMContentLoaded', function() {
+    carregarPostagens();
+    carregarListaPostagens();
+});
