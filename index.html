@@ -1,52 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livrarte - Seu nome aqui</title>
+    <title>Livrarte</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header>
-        <h1>Livrarte</h1>
-        <p>Seu nome aqui</p>
-    </header>
 
-    <!-- Apresentação e Foto -->
-    <section id="sobre">
-        <img src="sua-foto.jpg" alt="Sua Foto" id="foto">
-        <div id="texto-sobre">
-            <!-- Aqui você pode adicionar sua apresentação depois -->
-            <p>Aqui vai um pequeno texto sobre você.</p>
+    <div class="container">
+        <!-- Coluna direita: Foto, nome, resumo e Instagram -->
+        <div class="coluna-direita">
+            <div class="foto">
+                <img src="sua-foto.jpg" alt="Sua foto" id="foto" class="imagem-expandivel">
+            </div>
+            <h1 id="nome">Seu Nome</h1>
+            <p id="resumo">Aqui vai um breve resumo sobre você...</p>
+            <div class="instagram">
+                <a href="https://www.instagram.com/seuusername/" target="_blank">
+                    <img src="instagram-icon.png" alt="Instagram" id="instagram-icon">
+                </a>
+            </div>
         </div>
-    </section>
 
-    <!-- Contato -->
-    <section id="contato">
-        <a href="mailto:seu-email@exemplo.com">
-            <img src="email-icon.png" alt="Email" class="icone-contato">
-        </a>
-        <a href="https://www.instagram.com/seuperfil">
-            <img src="instagram-icon.png" alt="Instagram" class="icone-contato">
-        </a>
-    </section>
-
-    <!-- Postagens -->
-    <section id="postagens">
-        <!-- Exemplo de postagem (para você adicionar depois) -->
-        <div class="post">
-            <h2>Título da Postagem</h2>
-            <img src="imagem-postagem.jpg" alt="Imagem da Postagem" class="imagem-postagem">
-            <p>Resumo do texto...</p>
-            <a href="pagina-da-postagem.html">Leia mais...</a>
+        <!-- Coluna do meio: Postagens -->
+        <div class="coluna-meio" id="postagens">
+            <!-- Postagens serão carregadas via JavaScript -->
         </div>
-    </section>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2025 Livrarte. Todos os direitos reservados.</p>
-    </footer>
+        <!-- Coluna esquerda: Lista de postagens -->
+        <div class="coluna-esquerda" id="lista-postagens">
+            <!-- As postagens aparecerão aqui -->
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
