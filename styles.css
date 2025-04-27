@@ -1,0 +1,61 @@
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Coluna ESQUERDA */
+  .coluna-esquerda {
+    width: 25%;
+    order: 1;
+  }
+  
+  /* Coluna do MEIO */
+  .coluna-meio {
+    width: 50%;
+    order: 2;
+  }
+  
+  /* Coluna DIREITA */
+  .coluna-direita {
+    width: 25%;
+    order: 3;
+  }
+  
+  /* Estilos internos */
+  .coluna-esquerda .lista-postagem,
+  .coluna-meio .postagem {
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  /* Imagens expandíveis */
+  .imagem-postagem,
+  .imagem-expandivel {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .container { flex-direction: column; }
+    .coluna-esquerda,
+    .coluna-meio,
+    .coluna-direita { width: 100%; }
+  }
+  
