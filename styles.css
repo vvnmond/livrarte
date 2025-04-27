@@ -1,0 +1,109 @@
+/* Geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #e0e0e0;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #2c3e50;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #7f8c8d;
+}
+
+/* Seção Sobre */
+#sobre {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#sobre #foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+#sobre #texto-sobre p {
+    max-width: 500px;
+    font-size: 1.1em;
+    color: #7f8c8d;
+}
+
+/* Contato */
+#contato {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.icone-contato {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    opacity: 0.7;
+}
+
+.icone-contato:hover {
+    opacity: 1;
+}
+
+/* Postagens */
+#postagens {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.post {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.post h2 {
+    font-size: 1.5em;
+    color: #2c3e50;
+}
+
+.post a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3498db;
+    text-decoration: none;
+}
+
+.post a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #e0e0e0;
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
