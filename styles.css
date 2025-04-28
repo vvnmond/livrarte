@@ -1,6 +1,14 @@
 * {
     margin: 0; padding: 0; box-sizing: border-box;
   }
+
+h1 {
+  text-align: center;    /* Centraliza o texto */
+  margin-top: 20px;      /* Espaço do topo */
+  font-family: 'Arial', sans-serif; /* Fonte usada */
+  font-size: 36px;       /* Tamanho da fonte */
+  color: #333;           /* Cor do texto */
+}
   
   body {
     font-family: Arial, sans-serif;
