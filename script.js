@@ -1,7 +1,7 @@
 // Dados das postagens
 const postagens = [
-    { titulo: "Apresentação", imagem: "livro1.jpg", resumo: "Um breve olhar sobre o que encontrará aqui, e o que sou...", link: "#primeiro-livro" },
-    { titulo: "Pintura Abstrata", imagem: "pintura1.jpg", resumo: "Texto explicando...", link: "#pintura-abstrata" }
+    { titulo: "Pintura Abstrata", imagem: "pintura1.jpg", resumo: "Texto explicando...", link: "#pintura-abstrata" },
+    { titulo: "Apresentação", imagem: "livro1.jpg", resumo: "Um breve olhar sobre o que encontrará aqui, e o que sou...", link: "#primeiro-livro" }
   ];
   
   // Coluna do meio (postagens grandes)
