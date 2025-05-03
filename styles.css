@@ -1,25 +1,16 @@
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-h1 {
-  text-align: center; /* Centraliza o texto */
-  margin-top: 20px;    /* Espaço do topo */
-  font-family: 'Arial', sans-serif; /* Fonte usada */
-  font-size: 36px;     /* Tamanho da fonte */
-  color: #1c2842;      /* Azul mutado e quente */
+/* Rolagem suave para âncoras */
+html {
+  scroll-behavior: smooth;
 }
 
-h2 {
-  text-align: center; /* Centraliza o texto */
-  font-family: 'Arial', sans-serif;
-  font-size: 28px;
-  color: #1c2842; /* Azul mutado e quente */
-  margin-top: 10px;
-}
-
+/* Estilos do body */
 body {
   font-family: Arial, sans-serif;
   background-color: #f8f5f0; /* Off white quente */
@@ -27,6 +18,24 @@ body {
   padding: 20px;
 }
 
+/* Títulos */
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Arial', sans-serif;
+  font-size: 36px;
+  color: #1c2842;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 28px;
+  color: #1c2842;
+  margin-top: 10px;
+}
+
+/* Logo da lua */
 .logo-Mond {
   text-align: center;
   margin-top: 30px;
@@ -35,11 +44,12 @@ body {
 .imagem-Mond {
   width: 120px;
   height: 120px;
-  border-radius: 50%; /* Torna a imagem redonda */
+  border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombrinha */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Layout das colunas */
 .container {
   display: flex;
   justify-content: space-between;
@@ -50,42 +60,38 @@ body {
 }
 
 .coluna-esquerda,
-.coluna-meio,
 .coluna-direita {
-  padding: 20px;
-}
-
-.coluna-esquerda {
-  width: 25%;
+  width: 15%;          /* Colunas laterais mais estreitas */
+  min-height: 80vh;    /* Altura mínima maior */
 }
 
 .coluna-meio {
-  width: 50%;
+  width: 70%;          /* Coluna central mais larga */
+  min-height: 80vh;
 }
 
-.coluna-direita {
-  width: 25%;
+/* Estilo das listas e postagens */
+.coluna-esquerda .lista-postagem,
+.coluna-meio .postagem {
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
 }
 
-.foto img {
+/* Imagens expandíveis */
+.imagem-postagem,
+.imagem-expandivel {
   width: 100%;
-  border-radius: 50%; /* Faz a foto redonda */
-  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-.instagram {
-  margin-top: 20px;
-}
-
+/* Ícone do Instagram mais discreto */
 #instagram-icon {
-  width: 5px;
-  height: 5px;
-}
-
-.resumo {
-  font-size: 18px;
-  margin-top: 10px;
-  color: #1c2842; /* Azul mutado e quente */
+  width: 1.2em;        /* Tamanho pouco maior que texto */
+  height: auto;
+  vertical-align: middle;
 }
 
 /* Responsividade */
@@ -98,5 +104,15 @@ body {
   .coluna-meio,
   .coluna-direita {
     width: 100%;
+    min-height: auto;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .imagem-Mond {
+    width: 100px;
+    height: 100px;
   }
 }
