@@ -12,7 +12,22 @@ h1 {
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
+    background-color: #f8f5f0; /* Off white quente */
+    color: #1c2842; /* Azul mutado e quente */
+}
+
+ .logo-Mond {
+    text-align: center;
+    margin-top: 30px;
+}
+
+ .imagem-Mond {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
   }
   
   .container {
