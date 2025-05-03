@@ -1,84 +1,102 @@
 * {
-    margin: 0; padding: 0; box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 h1 {
-  text-align: center;    /* Centraliza o texto */
-  margin-top: 20px;      /* Espaço do topo */
+  text-align: center; /* Centraliza o texto */
+  margin-top: 20px;    /* Espaço do topo */
   font-family: 'Arial', sans-serif; /* Fonte usada */
-  font-size: 36px;       /* Tamanho da fonte */
-  color: #333;           /* Cor do texto */
-}
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f5f0; /* Off white quente */
-    color: #1c2842; /* Azul mutado e quente */
+  font-size: 36px;     /* Tamanho da fonte */
+  color: #1c2842;      /* Azul mutado e quente */
 }
 
- .logo-Mond {
-    text-align: center;
-    margin-top: 30px;
+h2 {
+  text-align: center; /* Centraliza o texto */
+  font-family: 'Arial', sans-serif;
+  font-size: 28px;
+  color: #1c2842; /* Azul mutado e quente */
+  margin-top: 10px;
 }
 
- .imagem-Mond {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f5f0; /* Off white quente */
+  color: #1c2842; /* Azul mutado e quente */
+  padding: 20px;
 }
-  }
-  
+
+.logo-Mond {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.imagem-Mond {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* Torna a imagem redonda */
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombrinha */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.coluna-esquerda,
+.coluna-meio,
+.coluna-direita {
+  padding: 20px;
+}
+
+.coluna-esquerda {
+  width: 25%;
+}
+
+.coluna-meio {
+  width: 50%;
+}
+
+.coluna-direita {
+  width: 25%;
+}
+
+.foto img {
+  width: 100%;
+  border-radius: 50%; /* Faz a foto redonda */
+  object-fit: cover;
+}
+
+.instagram {
+  margin-top: 20px;
+}
+
+#instagram-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.resumo {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #1c2842; /* Azul mutado e quente */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
   .container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    flex-direction: column;
   }
-  
-  /* Coluna ESQUERDA */
-  .coluna-esquerda {
-    width: 25%;
-    order: 1;
-  }
-  
-  /* Coluna do MEIO */
-  .coluna-meio {
-    width: 50%;
-    order: 2;
-  }
-  
-  /* Coluna DIREITA */
+
+  .coluna-esquerda,
+  .coluna-meio,
   .coluna-direita {
-    width: 25%;
-    order: 3;
-  }
-  
-  /* Estilos internos */
-  .coluna-esquerda .lista-postagem,
-  .coluna-meio .postagem {
-    background: #fff;
-    margin-bottom: 20px;
-    padding: 15px;
-    border-radius: 8px;
-  }
-  
-  /* Imagens expandíveis */
-  .imagem-postagem,
-  .imagem-expandivel {
     width: 100%;
-    border-radius: 8px;
-    cursor: pointer;
   }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .container { flex-direction: column; }
-    .coluna-esquerda,
-    .coluna-meio,
-    .coluna-direita { width: 100%; }
-  }
-  
+}
