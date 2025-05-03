@@ -5,16 +5,11 @@
   box-sizing: border-box;
 }
 
-/* Rolagem suave para âncoras */
-html {
-  scroll-behavior: smooth;
-}
-
 /* Estilos do body */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f8f5f0; /* Off white quente */
-  color: #1c2842; /* Azul mutado e quente */
+  background-color: #f8f5f0;
+  color: #1c2842;
   padding: 20px;
 }
 
@@ -22,14 +17,12 @@ body {
 h1 {
   text-align: center;
   margin-top: 20px;
-  font-family: 'Arial', sans-serif;
   font-size: 36px;
   color: #1c2842;
 }
 
 h2 {
   text-align: center;
-  font-family: 'Arial', sans-serif;
   font-size: 28px;
   color: #1c2842;
   margin-top: 10px;
@@ -45,8 +38,6 @@ h2 {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Layout das colunas */
@@ -61,13 +52,11 @@ h2 {
 
 .coluna-esquerda,
 .coluna-direita {
-  width: 15%;          /* Colunas laterais mais estreitas */
-  min-height: 80vh;    /* Altura mínima maior */
+  width: 20%;
 }
 
 .coluna-meio {
-  width: 70%;          /* Coluna central mais larga */
-  min-height: 80vh;
+  width: 60%;
 }
 
 /* Estilo das listas e postagens */
@@ -84,14 +73,12 @@ h2 {
 .imagem-expandivel {
   width: 100%;
   border-radius: 8px;
-  cursor: pointer;
 }
 
-/* Ícone do Instagram mais discreto */
-#instagram-icon {
-  width: 1.2em;        /* Tamanho pouco maior que texto */
+/* Ícone do Instagram */
+#Instagram-icon {
+  width: 24px;
   height: auto;
-  vertical-align: middle;
 }
 
 /* Responsividade */
@@ -104,7 +91,6 @@ h2 {
   .coluna-meio,
   .coluna-direita {
     width: 100%;
-    min-height: auto;
   }
 
   h1 {
