@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Livrarte</title>
+  <title>Livrar-te</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,11 +14,20 @@
   <h1>Livrar-te</h1>
   
   <div class="container">
-    <!-- Coluna ESQUERDA: Lista de postagens -->
-    <div class="coluna-esquerda" id="lista-postagens"></div>
+    <!-- Coluna ESQUERDA: Lista de postagens / Arquivos mensais -->
+    <div class="coluna-esquerda">
+      <div class="archives">
+        <h3>Arquivos</h3>
+        <ul id="archive-list">
+          <!-- Meses aparecerão aqui automaticamente -->
+        </ul>
+      </div>
+    </div>
 
     <!-- Coluna do MEIO: Postagens -->
-    <div class="coluna-meio" id="postagens"></div>
+    <div class="coluna-meio" id="postagens">
+      <!-- Seus posts serão carregados via script.js -->
+    </div>
 
     <!-- Coluna DIREITA: Suas informações -->
     <div class="coluna-direita">
@@ -34,6 +43,35 @@
       </div>
     </div>
   </div>
+
+  <!-- Script para gerar arquivos mensais automaticamente -->
+  <script>
+    // Lista de posts com título, data e URL
+    const posts = [
+      { title: "Primeiro post", date: "2025-05-03", url: "post1.html" },
+      { title: "Segundo post", date: "2025-06-10", url: "post2.html" },
+      // Adicione mais posts aqui
+    ];
+
+    // Gerar lista de meses automaticamente
+    const archiveList = document.getElementById("archive-list");
+    const months = {};
+
+    posts.forEach(post => {
+      const month = post.date.slice(0,7); // yyyy-mm
+      if (!months[month]) months[month] = [];
+      months[month].push(post);
+    });
+
+    for (let month in months) {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = "#"; // futuramente link para posts desse mês
+      a.textContent = month.replace("-", "/"); // ex: "2025/05"
+      li.appendChild(a);
+      archiveList.appendChild(li);
+    }
+  </script>
 
   <script src="script.js"></script>
 </body>
