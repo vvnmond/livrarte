@@ -43,29 +43,62 @@ h2 {
 /* Layout das colunas */
 .container {
   display: flex;
-  justify-content: space-between;
   gap: 20px;
-  max-width: 1200px;
+  max-width: 1400px; /* área maior do site */
   margin: 0 auto;
   padding: 20px;
 }
 
-.coluna-esquerda,
-.coluna-direita {
-  width: 20%;
+/* Coluna lateral (About Me) */
+.coluna-esquerda {
+  width: 300px; /* fixa a largura da sidebar */
 }
 
+.coluna-esquerda .about {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.coluna-esquerda .archives {
+  margin-top: 20px;
+}
+
+.coluna-esquerda .archives h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.coluna-esquerda .archives ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.coluna-esquerda .archives li a {
+  text-decoration: none;
+  color: #1c2842;
+}
+
+.coluna-esquerda .archives li a:hover {
+  text-decoration: underline;
+}
+
+/* Conteúdo principal */
 .coluna-meio {
-  width: 60%;
+  flex: 1;
 }
 
-/* Estilo das listas e postagens */
-.coluna-esquerda .lista-postagem,
 .coluna-meio .postagem {
   background: #fff;
   margin-bottom: 20px;
-  padding: 15px;
+  padding: 20px;
   border-radius: 8px;
+}
+
+.coluna-meio .postagem img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 /* Imagens expandíveis */
@@ -88,8 +121,7 @@ h2 {
   }
 
   .coluna-esquerda,
-  .coluna-meio,
-  .coluna-direita {
+  .coluna-meio {
     width: 100%;
   }
 
